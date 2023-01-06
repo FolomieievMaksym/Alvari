@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+@@include('./components/structure/_head.html', {
+'lang': 'en',
+'css': 'index',
+'title': 'Home',
+'swiper': 'true',
+})
+<!-- todo указать нужное значение дял подключени\отключения свайпера -->
+
+<body class="home">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html', {
+		'active': 'index'
+		})
+		<main>
+			@@include('./components/blocks/_hero.html', {
+			'title': 'Alvari',
+			'subtitle': 'Trading and logistics',
+			'text': 'Performant, agile, committed',
+			'photo':'0',
+			})
+			<section class="activities">
+				<div class="activities__container">
+					<div class="activities__item">
+						@@include('./components/blocks/_activities-title.html', {
+						'title': '<span>OUR</span><span>ACTIVITIES</span>'
+						})
+						<div class="activities__content">
+							<div class="activities__benefits benefits">
+								<div class="benefits__item">
+									<div class='benefits__image'>
+										<picture>
+											<source type='image/webp' srcset='@img/icons/barell-icon.webp'>
+											<img src='@img/icons/barell-icon.png' alt='barell icons'>
+										</picture>
+									</div>
+									<h4 class="benefits__title">PHYSICAL TRADING</h4>
+									<p class="benefits__text text">The petroleum products trade is our primary operation. Being well established throughout the Black Sea, the Mediterranean, Northern Europe, the Far East, Africa, and the Middle East, our business’ foundation is based on longstanding relationships and trust with our partner producers, refineries and logistics companies. The success of this enterprise is due to a blend of robustness and adaptability that inspires long-term confidence in our
+										stakeholders.</p>
+								</div>
+								<div class="benefits__item">
+									<div class='benefits__image'>
+										<picture>
+											<source type='image/webp' srcset='@img/icons/statiscic-icon.webp'>
+											<img src='@img/icons/statiscic-icon.png' alt='statistic icons'>
+										</picture>
+									</div>
+									<h4 class="benefits__title">DERIVATIVE TRADING</h4>
+									<p class="benefits__text text">Our Alvari Group uses derivative instruments to manage the fluctuations inherent to commodity trading. Continuing the theme of stability, we integrate risk management on a micro level, not purely macro: trading desks operate within centrally determined parameters and we hedge market prices via futures or swaps. Always supported by rigorous data collection, analysis and distribution, we’re able to keenly monitor markets, mitigating risks
+										and
+										identifying opportunities.</p>
+								</div>
+								<div class="benefits__item">
+									<div class='benefits__image'>
+										<picture>
+											<source type='image/webp' srcset='@img/icons/statiscic-icon.webp'>
+											<img src='@img/icons/statiscic-icon.png' alt='house icons'>
+										</picture>
+									</div>
+									<h4 class="benefits__title">STORAGE AND TRANSPORTATION</h4>
+									<p class="benefits__text text">We get commodities where they need to go! With safe and efficient storage and logistics, we use the latest technology to ensure efficacy as well as the utmost safety standards for the environment and our personnel. Geographically strategic depots give us access to the Asian, Middle Eastern and European markets, so we can get the right grade product - blended to match the customer’s specifications – to them by barge, rail, pipe and vessel.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="activities__item">
+						@@include('./components/blocks/_activities-title.html', {
+						'title': '<span>ACTIVE IN</span><span>CENTRAL ASIA</span>'
+						})
+						<div class="activities__content">
+							<div class="activities__text text">
+								<p>As one of the leading VGO and FO exporters in Kazakhstan, we buy oil products from all three main refineries located in Atyrau, Pavlodar and Shymkent as well as the majority of the output of smaller refineries in Kazakhstan and Kyrgyzstan. To synergise with this production, we applied our vision of stable yet agile networks, establishing strong, durable relationships with the largest freight forwarding companies in Russia and Georgia, as well securing transhipment
+									contracts with major marine
+									terminals in those countries too. All of that, along with our cooperation with diverse renowned international traders creates a resilient operation that increases potential future export options exponentially.</p>
+								<p>Further expansion and development are always just round the corner, the goal: adding additional strength and structure to our network.
+								</p>
+							</div>
+							<div class="activities__grid activities-grid">
+								<div class="activities-grid__first">
+									<p class="activities-grid__title">OPPORTUNITIES ON THE HORIZON</p>
+									<p class="activities-grid__text text">Extra export routes between Georgia, Azerbaijan, Uzbekistan, and Kyrgyzstan are all being implemented soon.
+									</p>
+								</div>
+								<div class="activities-grid__second">
+									<p class="activities-grid__title">ALWAYS DIVERSIFYING</p>
+									<p class="activities-grid__text text">An entirely new project in Uzbekistan importing gasoline and diesel of Russian origin is to be activated imminently.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html', {
+	'swiper': 'true',
+	'script': 'script',
+	})
+	<!-- todo указать нужное значение дял подключения\отключения свайпера -->
+</body>
+
+</html>

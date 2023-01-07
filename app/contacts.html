@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+@@include('./components/structure/_head.html', {
+'lang': 'en',
+'css': 'contacts',
+'title': 'Home',
+'swiper': 'false',
+})
+
+
+<body class="home">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html', {
+		'active': 'contacts'
+		})
+		<main>
+			@@include('./components/blocks/_hero.html', {
+			'title': 'Contact',
+			'subtitle': 'Alvari',
+			'text': 'Switzerland, Russia and Singapore',
+			'photo':'map',
+			})
+			<section class="activities">
+				<div class="activities__container">
+					<div class="activities__item">
+						@@include('./components/blocks/_activities-title.html', {
+						'title': '<span>CONTACT</span><span></span>'
+						})
+						<div class="activities__content">
+							<form action="mail.php" method="post" class="activities__form form">
+								<div class="form__input">
+									<input required type="text" placeholder="Full Name" name="name">
+								</div>
+								<div class="form__inputs">
+									<div class="form__input">
+										<input required type="mail" placeholder="Email" name="email">
+									</div>
+									<div class="form__input">
+										<input required type="tel" placeholder="Phone" name="phone">
+									</div>
+								</div>
+								<div class="form__textarea">
+									<textarea name="message" placeholder="Message"></textarea>
+								</div>
+								<div class="form__button">
+									<input type="submit" value="Send">
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="activities__item">
+						@@include('./components/blocks/_activities-title.html', {
+						'title': '<span>OUR</span><span>OFFICES</span>'
+						})
+						<div class="activities__content">
+							<div class="activities__text text">
+								<p>Discover our location worldwide to join our offices. Please make sure your meeting is confirmed.
+								</p>
+							</div>
+							<div class="activities__maps maps">
+								<div class="maps__item">
+									<div class="maps__map">
+										<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5522.405857396574!2d6.145387!3d46.206418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c654929b87ae7%3A0x1d53dfdf03bf91c0!2sQuai%20des%20Bergues%2025%2C%201201%20Gen%C3%A8ve%2C%20Suisse!5e0!3m2!1sfr!2sfr!4v1673085509831!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+									</div>
+									<address class="maps__content">
+										<p class="maps__title">SWIZERLAND</p>
+										<p>Alvari SA</p>
+										<p>Quai des Bergues 25</p>
+										<p>CH-1201 Genève</p>
+									</address>
+								</div>
+								<div class="maps__item">
+									<div class="maps__map">
+										<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d144143.58748141953!2d37.443792!3d55.632577!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xef3117f96f2c1097!2sOoo%20%22Al&#39;vari-Rus%22!5e0!3m2!1sfr!2sfr!4v1673085809250!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+									</div>
+									<address class="maps__content">
+										<p class="maps__title">RUSSIA</p>
+										<p>Alvari-rus LLC</p>
+										<p>LVIII, DVLD 3, building 1,</p>
+										<p>Kiev highway 21-th km, Moscow</p>
+										<p>108820 Russia</p>
+									</address>
+								</div>
+								<div class="maps__item">
+									<div class="maps__map">
+										<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7977.647905757315!2d103.854603!3d1.279215!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da191020be98d9%3A0x63bd5ebec1641753!2s12%20Marina%20Blvd%2C%20Singapore%20018982!5e0!3m2!1sfr!2sfr!4v1673085772987!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+									</div>
+									<address class="maps__content">
+										<p class="maps__title">SINGAPORE</p>
+										<p>Alvari Pte</p>
+										<p>12 Marina Boulevard</p>
+										<p>#16-02 MBFC Tower 3</p>
+										<p>Singapore 01898</p>
+									</address>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html', {
+	'swiper': 'false',
+	'script': 'script',
+	})
+
+</body>
+
+</html>

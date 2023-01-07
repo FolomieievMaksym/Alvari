@@ -7,7 +7,7 @@
 })
 
 
-<body class="home">
+<body class="home" id="top">
 	<div class="wrapper">
 		@@include('./components/structure/_header.html', {
 		'active': 'index'
@@ -21,7 +21,7 @@
 			})
 			<section class="activities">
 				<div class="activities__container">
-					<div class="activities__item">
+					<div data-animate class="activities__item">
 						@@include('./components/blocks/_activities-title.html', {
 						'title': '<span>OUR</span><span>ACTIVITIES</span>'
 						})
@@ -64,7 +64,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="activities__item">
+					<div data-animate class="activities__item">
 						@@include('./components/blocks/_activities-title.html', {
 						'title': '<span>ACTIVE IN</span><span>CENTRAL ASIA</span>'
 						})

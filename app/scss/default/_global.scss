@@ -6,6 +6,34 @@ body {
    color: $grey;
    font-family: $ff1;
    @include fl(15, 26.25);
+   p,
+   li,
+   address,
+   a,
+   span,
+   div,
+   input,
+   textarea,
+   button,
+   header,
+   footer,
+   main,
+   img,
+   picture,
+   source,
+   iframe,
+   nav,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+      &::selection {
+         background-color: $green;
+         color: $light;
+      }
+   }
 }
 .wrapper {
    display: flex;

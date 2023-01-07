@@ -1,5 +1,128 @@
 .footer {
+   background-color: $green;
+   // .footer__container
    &__container {
-      @extend %container;
+      padding-top: 108px;
+      padding-bottom: 108px;
+
+      display: grid;
+      row-gap: 72px;
+      @media (max-width: 768px) {
+         padding-left: 36px;
+         padding-right: 36px;
+      }
+      @media (min-width: 769px) {
+         column-gap: 36px;
+         align-items: start;
+         grid-template-columns: 1fr 4fr;
+         padding-right: percent(72, 1920);
+         padding-left: percent(72, 1920);
+         max-width: 1920px;
+         margin-left: auto;
+         margin-right: auto;
+      }
+      color: $light;
+   }
+
+   // .footer__logo
+   &__logo {
+      width: 217px;
+      @media (max-width: 768px) {
+         margin-left: auto;
+         margin-right: auto;
+      }
+      img {
+         max-width: 100%;
+      }
+   }
+
+   // .footer__item
+   &__item {
+      p {
+         &:not(:last-child) {
+            @include fl(14, 24.65);
+         }
+      }
+   }
+   &__items {
+      display: grid;
+      align-items: start;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      @media (max-width: 768px) {
+         justify-items: center;
+         text-align: center;
+         column-gap: 18px;
+         row-gap: 36px;
+      }
+      @media (min-width: 769px) {
+         column-gap: 36px;
+         row-gap: 72px;
+      }
+      a {
+         transition: all 0.3s ease;
+         &:hover {
+            color: $dark;
+            opacity: 0.85;
+         }
+      }
+   }
+
+   // .footer__title
+   &__title {
+      font-family: $ff2;
+      @include fl(17, 20.4);
+      font-weight: 300;
+      margin-bottom: 36px;
+   }
+
+   &__bottom {
+      background-color: #000;
+      &-container {
+         padding: 27px 36px;
+      }
+      &-list {
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+         @media (max-width: 768px) {
+            justify-content: center;
+         }
+         column-gap: 16px;
+         li {
+            color: $light;
+            &:not(:last-child) {
+               position: relative;
+               &:after {
+                  position: absolute;
+                  top: 0;
+                  left: calc(100% + 8px);
+                  transform: translateX(-50%);
+                  width: 1px;
+                  height: 100%;
+                  background: $light;
+               }
+            }
+            @media (min-width: 333px) {
+               &:first-child {
+                  &:after {
+                     content: "";
+                  }
+               }
+            }
+            @media (min-width: 540px) {
+               &:not(:last-child) {
+                  &:after {
+                     content: "";
+                  }
+               }
+            }
+            a {
+               transition: all 0.3s ease;
+               &:hover {
+                  color: $green;
+               }
+            }
+         }
+      }
    }
 }

@@ -2,12 +2,12 @@
 @@include('./components/structure/_head.html', {
 'lang': 'en',
 'css': 'about',
-'title': 'Home',
+'title': 'About',
 'swiper': 'false',
 })
 
 
-<body class="home">
+<body class="about" id="top">
 	<div class="wrapper">
 		@@include('./components/structure/_header.html', {
 		'active': 'about'
@@ -21,7 +21,7 @@
 			})
 			<section class="activities">
 				<div class="activities__container">
-					<div class="activities__item">
+					<div data-animate class="activities__item">
 						@@include('./components/blocks/_activities-title.html', {
 						'title': '<span>DIVERSIFICATION,</span><span>RESILIENCE,</span><span>STABILITY</span>'
 						})

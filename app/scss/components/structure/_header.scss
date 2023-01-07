@@ -279,3 +279,33 @@
       }
    }
 }
+#arrow-top {
+   transition: opacity 0.3s ease;
+   opacity: 0;
+   position: fixed;
+   z-index: 11;
+   right: 22px;
+   bottom: 60px;
+   span {
+      box-shadow: 0 0 3px $dark;
+      background-color: $dark;
+      width: 42px;
+      height: 42px;
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.5;
+      transition: all 0.3s ease;
+      &:hover {
+         opacity: 1;
+      }
+      svg {
+         width: 15px;
+         height: 15px;
+      }
+      path {
+         fill: $light;
+      }
+   }
+}

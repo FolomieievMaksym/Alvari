@@ -19,6 +19,7 @@
       row-gap: 36px;
       padding: 10px;
       max-width: 280px;
+      z-index: 1;
       // background-color: $lightgrey;
       @media (max-width: 768px) {
          margin-bottom: 36px;
@@ -38,7 +39,7 @@
          position: absolute;
          top: 0;
          left: 0;
-         bottom: 0;
+         bottom: -1px;
          right: 0;
          background: $lightgrey;
          opacity: 0.75;
@@ -309,14 +310,13 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-
+      h5 {
+         margin-bottom: 18px;
+         @include fl(17, 20.4);
+         color: $green;
+         font-family: $ff2;
+      }
       p {
-         &:first-child {
-            margin-bottom: 18px;
-            @include fl(17, 20.4);
-            color: $green;
-            font-family: $ff2;
-         }
          &:not(:last-child, :first-child) {
             margin-bottom: 6px;
          }

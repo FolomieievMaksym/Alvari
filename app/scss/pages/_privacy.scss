@@ -1,5 +1,7 @@
 .privacy {
    &__container {
+      padding-top: 36px;
+      padding-bottom: 36px;
       @extend %container;
    }
    h1,

@@ -9,11 +9,11 @@
 	
 	<link rel="stylesheet" href="./css/contacts.min.css">
 	<link rel="shortcut icon" type="image/png" href="img/favicon.ico">
-	<title>Home</title>
+	<title>Contacts</title>
 </head>
 
 
-<body class="home">
+<body class="contacts" id="top">
 	<div class="wrapper">
 		<header class="header">
 	<div class="header__container">
@@ -68,21 +68,24 @@
 		</div>
 	</div>
 </header>
+<a href="#top" id="arrow-top"><span><svg viewBox="0 0 96 96">
+	<path d="M82.6074,62.1072,52.6057,26.1052a6.2028,6.2028,0,0,0-9.2114,0L13.3926,62.1072a5.999,5.999,0,1,0,9.2114,7.6879L48,39.3246,73.396,69.7951a5.999,5.999,0,1,0,9.2114-7.6879Z" />
+</svg></span></a>
 		<main>
 			<section class="hero">
 	<div class="hero__container">
 		<div class="hero__wrapper">
 			<div class="hero__content">
 				<div class="hero__top">
-					<h1 class="hero__title">Contact</h1>
-					<h2 class="hero__subtitle hero__subtitle_green">Alvari</h2>
+					<h1 data-anim data-animate-title class="hero__title">Contact</h1>
+					<h2 data-anim data-animate-subtitle class="hero__subtitle hero__subtitle_green">Alvari</h2>
 				</div>
-				<p class="hero__text text">Switzerland, Russia and Singapore</p>
-				<div class="hero__decor">
+				<p data-anim data-animate-text class="hero__text text">Switzerland, Russia and Singapore</p>
+				<div data-anim-decor data-animate-decor class="hero__decor">
 					<span></span>
 				</div>
 			</div>
-			<div class='hero__image'>
+			<div data-animate-scale class='hero__image'>
 				<picture>
 					<source type='image/webp' srcset='img/gallery/map.webp'>
 					<img src='img/gallery/map.jpg' alt='Content photo #map'>
@@ -93,10 +96,10 @@
 </section>
 			<section class="activities">
 				<div class="activities__container">
-					<div class="activities__item">
+					<div data-animate class="activities__item">
 						<div class="activities__title">
-	<h3><span>CONTACT</span><span></span></h3>
-	<div class="activities__title-decor"><span></span></div>
+	<h3 data-animate-left><span>CONTACT</span><span></span></h3>
+	<div data-animate-bottom class="activities__title-decor"><span></span></div>
 </div>
 						<div class="activities__content">
 							<form action="mail.php" method="post" class="activities__form form">
@@ -120,10 +123,10 @@
 							</form>
 						</div>
 					</div>
-					<div class="activities__item">
+					<div data-animate class="activities__item">
 						<div class="activities__title">
-	<h3><span>OUR</span><span>OFFICES</span></h3>
-	<div class="activities__title-decor"><span></span></div>
+	<h3 data-animate-left><span>OUR</span><span>OFFICES</span></h3>
+	<div data-animate-bottom class="activities__title-decor"><span></span></div>
 </div>
 						<div class="activities__content">
 							<div class="activities__text text">
@@ -135,8 +138,8 @@
 									<div class="maps__map">
 										<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5522.405857396574!2d6.145387!3d46.206418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c654929b87ae7%3A0x1d53dfdf03bf91c0!2sQuai%20des%20Bergues%2025%2C%201201%20Gen%C3%A8ve%2C%20Suisse!5e0!3m2!1sfr!2sfr!4v1673085509831!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 									</div>
-									<address class="maps__content">
-										<p class="maps__title">SWIZERLAND</p>
+									<address data-animate-address class="maps__content">
+										<h5 class="maps__title">SWIZERLAND</h5>
 										<p>Alvari SA</p>
 										<p>Quai des Bergues 25</p>
 										<p>CH-1201 Genève</p>
@@ -146,8 +149,8 @@
 									<div class="maps__map">
 										<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d144143.58748141953!2d37.443792!3d55.632577!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xef3117f96f2c1097!2sOoo%20%22Al&#39;vari-Rus%22!5e0!3m2!1sfr!2sfr!4v1673085809250!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 									</div>
-									<address class="maps__content">
-										<p class="maps__title">RUSSIA</p>
+									<address data-animate-address class="maps__content">
+										<h5 class="maps__title">RUSSIA</h5>
 										<p>Alvari-rus LLC</p>
 										<p>LVIII, DVLD 3, building 1,</p>
 										<p>Kiev highway 21-th km, Moscow</p>
@@ -158,8 +161,8 @@
 									<div class="maps__map">
 										<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7977.647905757315!2d103.854603!3d1.279215!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da191020be98d9%3A0x63bd5ebec1641753!2s12%20Marina%20Blvd%2C%20Singapore%20018982!5e0!3m2!1sfr!2sfr!4v1673085772987!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 									</div>
-									<address class="maps__content">
-										<p class="maps__title">SINGAPORE</p>
+									<address data-animate-address class="maps__content">
+										<h5 class="maps__title">SINGAPORE</h5>
 										<p>Alvari Pte</p>
 										<p>12 Marina Boulevard</p>
 										<p>#16-02 MBFC Tower 3</p>
@@ -174,7 +177,47 @@
 		</main>
 		<footer class="footer">
 	<div class="footer__container">
-		<h2>Footer</h2>
+		<div class='footer__logo'>
+			<picture>
+				<source type='image/webp' srcset='img/logo-footer.webp'>
+				<img src='img/logo-footer.png' alt='Logo'>
+			</picture>
+		</div>
+		<div class="footer__items">
+			<address class="footer__item">
+				<h5 class="footer__title">SWIZERLAND</h5>
+				<p>Alvari SA</p>
+				<p>Quai des Bergues 25</p>
+				<p>CH-1201 Genève</p>
+			</address>
+			<address class="footer__item">
+				<h5 class="footer__title">RUSSIA</h5>
+				<p>Alvari-rus LLC</p>
+				<p>LVIII, DVLD 3, building 1,</p>
+				<p>Kiev highway 21-th km, Moscow</p>
+				<p>108820 Russia</p>
+			</address>
+			<address class="footer__item">
+				<h5 class="footer__title">SINGAPORE</h5>
+				<p>Alvari Pte</p>
+				<p>12 Marina Boulevard</p>
+				<p>#16-02 MBFC Tower 3</p>
+				<p>Singapore 01898</p>
+			</address>
+			<address class="footer__item">
+				<h5 class="footer__title">Contact</h5>
+				<a href="mailto:info@alvarigroup.com">Email: info@alvarigroup.com</a>
+			</address>
+		</div>
+	</div>
+	<div class="footer__bottom">
+		<div class="footer__bottom-container">
+			<ul class="footer__bottom-list">
+				<li>© 2021 Alvari Group</li>
+				<li>By <a target="_blank" href="https://www.blikagency.com/">BlikAgency</a></li>
+				<li><a href="privacy.html">Politique de Confidentialité</a></li>
+			</ul>
+		</div>
 	</div>
 </footer>
 	</div>

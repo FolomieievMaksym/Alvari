@@ -63,3 +63,16 @@ function hideHeaderPart() {
       header.style.opacity = "1";
    }
 }
+
+// Arrow #top
+let viewportHeight = document.documentElement.clientHeight;
+const arrowTop = document.getElementById("arrow-top");
+window.addEventListener("scroll", linkToTop);
+linkToTop();
+function linkToTop(e) {
+   if (window.pageYOffset > viewportHeight) {
+      arrowTop.style.opacity = "1";
+   } else {
+      arrowTop.style.opacity = "0";
+   }
+}

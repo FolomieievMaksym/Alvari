@@ -2,12 +2,12 @@
 @@include('./components/structure/_head.html', {
 'lang': 'en',
 'css': 'products',
-'title': 'Home',
+'title': 'Products',
 'swiper': 'false',
 })
 
 
-<body class="home">
+<body class="products" id="top">
 	<div class="wrapper">
 		@@include('./components/structure/_header.html', {
 		'active': 'products'
@@ -21,7 +21,7 @@
 			})
 			<section class="activities">
 				<div class="activities__container">
-					<div class="activities__item">
+					<div data-animate class="activities__item">
 						@@include('./components/blocks/_activities-title.html', {
 						'title': '<span>Trading &</span><span>Logistics</span>'
 						})
@@ -51,12 +51,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="activities__item">
+					<div data-animate class="activities__item">
 						@@include('./components/blocks/_activities-title.html', {
 						'title': '<span>FUEL OIL</span>'
 						})
 						<div class="activities__content">
-							<div class="activities__image">
+							<div data-animate-right class="activities__image">
 								<picture>
 									<source type='image/webp' srcset='@img/gallery/content_03.webp'>
 									<img src='@img/gallery/content_03.jpg' alt='content image #3'>
@@ -76,12 +76,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="activities__item">
+					<div data-animate class="activities__item">
 						@@include('./components/blocks/_activities-title.html', {
 						'title': '<span>MIDDLE</span><span>DISTILLATES</span>'
 						})
 						<div class="activities__content">
-							<div class="activities__image">
+							<div data-animate-right class="activities__image">
 								<picture>
 									<source type='image/webp' srcset='@img/gallery/content_04.webp'>
 									<img src='@img/gallery/content_04.jpg' alt='content image #4'>
@@ -95,12 +95,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="activities__item">
+					<div data-animate class="activities__item">
 						@@include('./components/blocks/_activities-title.html', {
 						'title': '<span>LPG</span>'
 						})
 						<div class="activities__content">
-							<div class="activities__image">
+							<div data-animate-right class="activities__image">
 								<picture>
 									<source type='image/webp' srcset='@img/gallery/content_05.webp'>
 									<img src='@img/gallery/content_05.jpg' alt='content image #5'>
@@ -112,12 +112,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="activities__item">
+					<div data-animate class="activities__item">
 						@@include('./components/blocks/_activities-title.html', {
 						'title': '<span>BIODIESEL</span>'
 						})
 						<div class="activities__content">
-							<div class="activities__image">
+							<div data-animate-right class="activities__image">
 								<picture>
 									<source type='image/webp' srcset='@img/gallery/content_06.webp'>
 									<img src='@img/gallery/content_06.jpg' alt='content image #6'>
@@ -131,12 +131,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="activities__item">
+					<div data-animate class="activities__item">
 						@@include('./components/blocks/_activities-title.html', {
 						'title': '<span>THE ASTRAKHAN</span><span>OIL TERMINAL</span>'
 						})
 						<div class="activities__content">
-							<div class="activities__image">
+							<div data-animate-right class="activities__image">
 								<picture>
 									<source type='image/webp' srcset='@img/gallery/content_07.webp'>
 									<img src='@img/gallery/content_07.jpg' alt='content image #7'>

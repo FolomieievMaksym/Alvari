@@ -83,7 +83,7 @@ itemsToAnimateDecor.forEach((el) => {
 // showAnimatedItems();
 // function showAnimatedItems(e) {
 //    itemsToAnimate.forEach((el) => {
-//       if (el.getBoundingClientRect().top <= viewportHeight / 1.1) {
+//       if (el.getBoundingClientRect().top <= viewportHeight / 1.15) {
 //          el.style.transform = "translate(0,0) scale(1)";
 //          el.style.opacity = "1";
 //       }
@@ -94,7 +94,7 @@ window.addEventListener("scroll", showAnimatedItems);
 showAnimatedItems();
 function showAnimatedItems(e) {
    itemsToAnimate.forEach((el) => {
-      if (el.getBoundingClientRect().top <= viewportHeight / 1.3) {
+      if (el.getBoundingClientRect().top <= viewportHeight / 1.15) {
          el.children[0].children[0].style.transform = "translateX(0)";
          el.children[0].children[0].style.opacity = "1";
          el.children[0].children[1].style.transform = "translateY(0)";
@@ -104,25 +104,25 @@ function showAnimatedItems(e) {
       }
    });
    itemsToAnimateAddress.forEach((el) => {
-      if (el.getBoundingClientRect().top <= viewportHeight / 1.3) {
+      if (el.getBoundingClientRect().top <= viewportHeight / 1.15) {
          el.style.transform = "translateX(0)";
          el.style.opacity = "1";
       }
    });
    itemsToAnimateScale.forEach((el) => {
-      if (el.getBoundingClientRect().top <= viewportHeight / 1.3) {
+      if (el.getBoundingClientRect().top <= viewportHeight / 1.15) {
          el.style.transform = "scale(1)";
          el.style.opacity = "1";
       }
    });
    itemsToAnimateAnim.forEach((el) => {
-      if (el.getBoundingClientRect().top <= viewportHeight / 1.3) {
+      if (el.getBoundingClientRect().top <= viewportHeight / 1.15) {
          el.style.transform = "scale(1)";
          el.style.opacity = "1";
       }
    });
    itemsToAnimateDecor.forEach((el) => {
-      if (el.getBoundingClientRect().top <= viewportHeight / 1.3) {
+      if (el.getBoundingClientRect().top <= viewportHeight / 1.15) {
          el.style.transform = "translateY(15px)";
          el.style.opacity = "1";
          setTimeout(() => {

@@ -65,6 +65,14 @@ function clean() {
    return del("docs/*");
 }
 
+function copyFormData() {
+   return gulp
+      .src(["./app/sendmail.php", "./app/mail.php"])
+      .pipe(gulp.dest("./docs"))
+      .pipe(gulp.src("./app/PHPMailer-6.7.1/**/*"))
+      .pipe(gulp.dest("./docs/PHPMailer-6.7.1"));
+}
+
 // Очистить docs за исключением ./img в нём
 function cleanSoft() {
    return del(["docs/*", "!docs/img", "!docs/fonts"]);
@@ -250,7 +258,7 @@ exports.js = js;
 // exports.ts = ts;
 exports.img = img;
 exports.fonts = fonts;
+exports.copyFormData = copyFormData;
 exports.watcher = watcher;
-
-exports.default = gulp.series(cleanSoft, gulp.parallel(html, scss, js, img), watcher);
-exports.build = gulp.series(clean, gulp.parallel(htmlMin, fonts, scss, js, img), watcher);
+exports.default = gulp.series(cleanSoft, gulp.parallel(html, scss, js, img, copyFormData), watcher);
+exports.build = gulp.series(clean, gulp.parallel(htmlMin, fonts, scss, js, img, copyFormData), watcher);

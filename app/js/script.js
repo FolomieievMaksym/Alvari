@@ -15,6 +15,7 @@ import {} from "./menu.js";
 // import {} from "./spoiler-absolute.js";
 // import {} from "./accordion.js";
 import {} from "./animate.js";
+import {} from "./form.js";
 // import {} from "./pop-up-video.js";
 // import {} from "./pop-up.js";
 // import {} from "./marquee.js";

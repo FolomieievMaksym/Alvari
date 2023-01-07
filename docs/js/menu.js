@@ -20,17 +20,21 @@ function openBurger() {
    body.classList.add("lock");
    header.classList.add("active");
    burger.classList.add("active");
-   headerAction.style.height = headerAction.scrollHeight + "px";
-   headerAction.classList.add("opened");
-   window.addEventListener("scroll", closeBurger);
+   if (window.innerWidth < 769) {
+      headerAction.style.height = headerAction.scrollHeight + "px";
+      headerAction.classList.add("opened");
+      window.addEventListener("scroll", closeBurger);
+   }
 }
 function closeBurger() {
    body.classList.remove("lock");
    header.classList.remove("active");
    burger.classList.remove("active");
-   headerAction.style.height = "0px";
-   headerAction.classList.remove("opened");
-   window.removeEventListener("scroll", closeBurger);
+   if (window.innerWidth < 769) {
+      headerAction.style.height = "0px";
+      headerAction.classList.remove("opened");
+      window.removeEventListener("scroll", closeBurger);
+   }
 }
 
 // ! <main></main>

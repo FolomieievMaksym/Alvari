@@ -26,16 +26,16 @@
 						'title': '<span>CONTACT</span><span></span>'
 						})
 						<div class="activities__content">
-							<form action="mail.php" method="post" class="activities__form form" id="form">
+							<form action="#" method="post" class="activities__form form" id="form">
 								<div class="form__input">
 									<input required type="text" placeholder="Full Name" name="name">
 								</div>
 								<div class="form__inputs">
 									<div class="form__input">
-										<input required type="email" placeholder="Email" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$">
+										<input required type="email" placeholder="Email" name="email">
 									</div>
 									<div class="form__input">
-										<input required type="tel" placeholder="Phone" name="phone">
+										<input required type="tel" placeholder="Phone" name="phone" id="phone">
 									</div>
 								</div>
 								<div class="form__textarea">
@@ -45,6 +45,11 @@
 									<input type="submit" value="Send">
 								</div>
 							</form>
+							<div class="pop-up-sucess">
+								<div class="pop-up-sucess__wrapper">
+									<p class="pop-up-sucess__text">Form sended</p>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div data-animate class="activities__item">
@@ -104,7 +109,7 @@
 	'swiper': 'false',
 	'script': 'script',
 	})
-
+	<script src="./intl-tel-input-17.0.19/build/js/intlTelInput.js"></script>
 </body>
 
 </html>

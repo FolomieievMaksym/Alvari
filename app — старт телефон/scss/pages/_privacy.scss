@@ -1,0 +1,49 @@
+.privacy {
+   &__container {
+      padding-top: 36px;
+      padding-bottom: 36px;
+      @extend %container;
+   }
+   h1,
+   h2,
+   h3 {
+      font-weight: 600;
+      font-family: $ff2;
+      margin-top: 27px;
+      color: $dark;
+   }
+   h1 {
+      @include fl(35, 42);
+   }
+   h2 {
+      @include fl(29, 34.8);
+   }
+   h3 {
+      @include fl(24, 28.8);
+   }
+   p,
+   ul {
+      margin-top: 18px;
+      span {
+         font-weight: 600;
+         color: $dark;
+      }
+   }
+   ul {
+      list-style-type: disc;
+      list-style-position: inside;
+      li {
+         span {
+            color: $grey;
+         }
+      }
+   }
+   a {
+      color: $dark;
+      transition: all 0.3s ease;
+      word-break: break-all;
+      &:hover {
+         color: $green;
+      }
+   }
+}

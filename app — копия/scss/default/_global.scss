@@ -1,0 +1,53 @@
+body.lock {
+   overflow: hidden;
+}
+
+body {
+   color: $grey;
+   font-family: $ff1;
+   @include fl(15, 26.25);
+   p,
+   li,
+   address,
+   a,
+   span,
+   div,
+   input,
+   textarea,
+   button,
+   header,
+   footer,
+   main,
+   img,
+   picture,
+   source,
+   iframe,
+   nav,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+      &::selection {
+         background-color: $green;
+         color: $light;
+      }
+   }
+}
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   min-height: 100vh;
+   overflow: hidden;
+}
+main {
+   flex: 1 1 auto;
+   padding-top: 86.03px;
+}
+picture {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}

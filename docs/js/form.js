@@ -6,19 +6,21 @@ if (document.getElementById("form")) {
       let error = formValidate(form);
       let formData = new FormData(form);
       if (error === 0) {
-         let response = await fetch("sendmail.php", {
+         let response = await fetch("./mail.php", {
             method: "POST",
             body: formData,
          });
-         console.log("1");
          if (response.ok) {
-            console.log("show Pop Up");
+            document.querySelector(".pop-up-sucess").classList.add("active");
+            setTimeout(() => {
+               document.querySelector(".pop-up-sucess").classList.remove("active");
+            }, 2000);
             form.reset();
          } else {
-            console.log("error");
+            Alert("Something went wrong");
          }
       } else {
-         alert("Заполните обязательные поля");
+         alert("Write correct data");
       }
    }
    function formValidate(form) {
@@ -31,33 +33,37 @@ if (document.getElementById("form")) {
             if (phoneReg(input)) {
                formAddError(input);
                console.log(phoneReg(input));
+               // alert("phone error");
                error++;
             }
          } else if (input.name == "email") {
-            if (emailReg(input)) {
-               formAddError(input);
-               console.log(emailReg(input));
-               error++;
-            }
+            // if (emailReg(input)) {
+            //    formAddError(input);
+            //    // alert("email error");
+            //    error++;
+            // }
          }
       }
-      console.log(error);
       return error;
    }
    function formAddError(input) {
-      input.parentElement.classList.add("_error");
+      input.classList.add("_error");
       input.classList.add("_error");
    }
    function formRemoveError(input) {
-      input.parentElement.classList.remove("_error");
+      input.classList.remove("_error");
       input.classList.remove("_error");
    }
 
    function phoneReg(input) {
-      return !/(dsa)/.test(input.value);
+      return /[^\d\-\_\(\)]/.test(input.value);
    }
    function emailReg(input) {
-      // return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-      return !/dsa/.test(input.value);
+      // return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+      return /[^\w\-\_]\@[^\w\-\_]\.([^\w])|([^\w]\.[^\w])/.test(input.value);
    }
+   var input = document.querySelector("#phone");
+   window.intlTelInput(input, {
+      // any initialisation options go here
+   });
 }

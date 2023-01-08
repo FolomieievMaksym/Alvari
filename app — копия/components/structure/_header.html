@@ -1,0 +1,46 @@
+<header class="header">
+	<div class="header__container">
+		<div class="header__body">
+			<a class="header__logo" href="index.html">
+				<picture>
+					<source type='image/webp' srcset='@img/logo.webp'>
+					<img src='@img/logo.jpg' alt='Logo'>
+				</picture>
+			</a>
+			<nav class="header__action header-action">
+				<ul class="header-action__list">
+					<li class="header-action__item @@if (context.active == 'index'){active}">
+						<a href="index.html">
+							<p>Home</p>
+							<span>@@include('../icons/_arrow-right.html')</span>
+						</a>
+					</li>
+					<li class="header-action__item @@if (context.active == 'about'){active}">
+						<a href="about.html">
+							<p>About us</p>
+							<span>@@include('../icons/_arrow-right.html')</span>
+						</a>
+					</li>
+					<li class="header-action__item @@if (context.active == 'products'){active}">
+						<a href="products.html">
+							<p>Products & Services</p>
+							<span>@@include('../icons/_arrow-right.html')</span>
+						</a>
+					</li>
+					<li class="header-action__item @@if (context.active == 'contacts'){active}">
+						<a href="contacts.html">
+							<p>Contact</p>
+							<span>@@include('../icons/_arrow-right.html')</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header__burger burger">
+				<div class="burger__wrapper">
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<a href="#top" id="arrow-top"><span>@@include('../icons/_arrow-top.html')</span></a>

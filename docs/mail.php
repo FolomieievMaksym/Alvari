@@ -9,7 +9,7 @@ $c = true;
 $message = "";
 	$project_name = "Alvari";
 	$admin_email  = "folomieiev.m@gmail.com";
-	$form_subject = "New order";
+	$form_subject = "Form subject";
 
 	$_POST['project_name'] = $project_name;
 	$_POST['admin_email'] = $admin_email;
@@ -17,8 +17,8 @@ $message = "";
 	foreach ( $_POST as $key => $value ) {
 		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
 			$message .= "
-			$key: $value;
-			";
+$key: $value;
+";
 		}
 	}
 
@@ -35,7 +35,6 @@ $name = isset($_POST['name']) ? $_POST['name'] : '';
 $phone = isset($_POST['phone']) ? $_POST['phone'] : ''; 
 $email = isset($_POST['email']) ? $_POST['email'] : '';
 $userMessage = isset($_POST['message']) ? $_POST['message'] : '';
-$tg_text = "Имя: $name\nТелефон: $phone\nE-mail: $email\nMessage: $userMessage";
 mail($admin_email, adopt($form_subject), $message, $headers );
 
 

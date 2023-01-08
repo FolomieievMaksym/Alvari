@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+@@include('./components/structure/_head.html', {
+'lang': 'en',
+'css': 'products',
+'title': 'Products',
+'swiper': 'false',
+})
+
+
+<body class="products" id="top">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html', {
+		'active': 'products'
+		})
+		<main>
+			@@include('./components/blocks/_hero.html', {
+			'title': 'Products &',
+			'subtitle': 'Services',
+			'text': 'Diversification, resilience, stability',
+			'photo':'content_02',
+			})
+			<section class="activities">
+				<div class="activities__container">
+					<div data-animate class="activities__item">
+						@@include('./components/blocks/_activities-title.html', {
+						'title': '<span>Trading &</span><span>Logistics</span>'
+						})
+						<div class="activities__content">
+							<div class="activities__text text">
+								<p>The Alvari Group is a collaboration of professional trading companies that operates mostly in oil product markets. Primarily trading petroleum products throughout the Black Sea, the Mediterranean, Northern Europe, the Far East, Africa, and the Middle East, our enterprise is constantly diversifying its energy streams and activities with new products added every year. The storage and transportation of these products are also part of our services.</p>
+							</div>
+							<div class="activities__grid activities-grid">
+								<div class="activities-grid__first">
+									<p class="activities-grid__title">OUR MARKETS</p>
+									<ul class="activities-grid__list text">
+										<li>Crude Oil</li>
+										<li>Fuel Oil</li>
+										<li>Heavy Oil</li>
+										<li>VGO</li>
+									</ul>
+								</div>
+								<div class="activities-grid__second">
+									<p class="activities-grid__title"></p>
+									<ul class="activities-grid__list text">
+										<li>LPG</li>
+										<li>Middle Distillates</li>
+										<li>Biodiesel</li>
+										<li>Biodiesel Feedstocks (CPO, UCO, POME, etc.)</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-animate class="activities__item">
+						@@include('./components/blocks/_activities-title.html', {
+						'title': '<span>FUEL OIL</span>'
+						})
+						<div class="activities__content">
+							<div data-animate-right class="activities__image">
+								<picture>
+									<source type='image/webp' data-srcset='@img/gallery/content_03.webp'>
+									<img data-img-src='@img/gallery/content_03.jpg' alt='content image #3'>
+								</picture>
+							</div>
+							<div class="activities__text text">
+								<p>
+									<span>Alvari SA has consistently bought 30-60% of all Turkmenistan fuel oil available for export in the past 4 years. This has been done in cooperation with our long-term partners but also via spot purchase when strategic. This product serves as a perfect blending component to add to other streams.
+									</span>
+									<span>In addition, for the past half a decade our company has been using Suezmax tankers as ongoing floating storage in the Black Sea area, allowing for efficient fuel oil blending and subsequently its transhipment. These FSUs can stock up to 150-160kt of cargo and enable the continuous flow of product exports all over the world, supplying tankers as and when needed.
+									</span>
+									<span>We tranship fuel oil ourselves via Georgian and Russian ports in the Black and Azov seas, and use 60kt shoretanks at Marmara Ereglisi in order to supply products to Turkey. The recent acquisition of an oil terminal in Astrakhan will further strengthen Alvari’s presence and expansion in the region.
+									</span>
+									<span>Since 2020 Alvari has applied this same organisation in Indonesian waters, using another Suezmax FSU to supply our customers in South-East Asia.
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div data-animate class="activities__item">
+						@@include('./components/blocks/_activities-title.html', {
+						'title': '<span>MIDDLE</span><span>DISTILLATES</span>'
+						})
+						<div class="activities__content">
+							<div data-animate-right class="activities__image">
+								<picture>
+									<source type='image/webp' data-srcset='@img/gallery/content_04.webp'>
+									<img data-img-src='@img/gallery/content_04.jpg' alt='content image #4'>
+								</picture>
+							</div>
+							<div class="activities__text text">
+								<p>Alvari started a Middle Distillate Trading Book in Asia in January 2020 (now a registered and approved entity by Mean of Platts Straits, both swaps and physical) trading middle distillate products with refineries, trading houses and end-users across Asia. Our derivatives trading business provides our clients with risk management solutions, covering different commodity pricing centers. While Alvari’s primary focus for middle distillates today is China, Korea and
+									South-East Asia, we are actively
+									looking at expanding our network into other regions east of the Suez.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div data-animate class="activities__item">
+						@@include('./components/blocks/_activities-title.html', {
+						'title': '<span>LPG</span>'
+						})
+						<div class="activities__content">
+							<div data-animate-right class="activities__image">
+								<picture>
+									<source type='image/webp' data-srcset='@img/gallery/content_05.webp'>
+									<img data-img-src='@img/gallery/content_05.jpg' alt='content image #5'>
+								</picture>
+							</div>
+							<div class="activities__text text">
+								<p>The Alvari LPG desk started operations in August 2019, and began physically trading in January 2020. In the following 6-month window our LPG desk had traded more than 300kt of refrigerated LPG, supplying major importers in South Korea and China. We more than doubled this figure by the end of the year and now plan to further increase our physical volume and be more active on the shipping and storage side of the industry.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div data-animate class="activities__item">
+						@@include('./components/blocks/_activities-title.html', {
+						'title': '<span>BIODIESEL</span>'
+						})
+						<div class="activities__content">
+							<div data-animate-right class="activities__image">
+								<picture>
+									<source type='image/webp' data-srcset='@img/gallery/content_06.webp'>
+									<img data-img-src='@img/gallery/content_06.jpg' alt='content image #6'>
+								</picture>
+							</div>
+							<div class="activities__text text">
+								<p>The Alvari SA Biodiesel desk started operations in February of 2019 and has since seen rapid progress. Our company was quickly certified by ISSC on April the 4th, 2019 as a Green House Gas reducing trader and we accounted for 20% of the total traded PME out of Asia by the end of the year. We loaded the first biodiesel, Palm Methyl Ester onto the MT Ramelia, a renewables LNG powered vessel on the 25th of September 2019. Since then we haven’t slowed down: we’ve hired a
+									dedicated blending terminal
+									for Biodiesels in Amsterdam; received permission to sell FAME (Biodiesel blends) with Argus; and we once again received recognition by ISCC in one of its sustainable Green House Gas saving audits.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div data-animate class="activities__item">
+						@@include('./components/blocks/_activities-title.html', {
+						'title': '<span>THE ASTRAKHAN</span><span>OIL TERMINAL</span>'
+						})
+						<div class="activities__content">
+							<div data-animate-right class="activities__image">
+								<picture>
+									<source type='image/webp' data-srcset='@img/gallery/content_07.webp'>
+									<img data-img-src='@img/gallery/content_07.jpg' alt='content image #7'>
+								</picture>
+							</div>
+							<div class="activities__text text">
+								<p>The Alvari Astrakhan Oil Terminal underwent a total renovation in 2020. Rebuilt from the ground up and operated by our subsidiary, this strategic station in Russia provides access to the Asian, Middle eastern and European markets via the passage between the Caspian and Black seas. State of the art, it incorporates all the latest technologies to maximise the site’s performance as well as adhere to the strictest safety protocols. It has a total storage capacity of 80,000
+									CBM divided into 15
+									separate tanks and can handle both light and heavy products that require heating. The terminal’s access to two berths allows the simultaneous discharge and loading of both Russian and foreign vessels maximising our efficiency. In addition to over-water transportation the terminal can load/discharge cargo on lorries and rail cars providing adaptable delivery options.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html', {
+	'swiper': 'false',
+	'script': 'script',
+	})
+
+</body>
+
+</html>

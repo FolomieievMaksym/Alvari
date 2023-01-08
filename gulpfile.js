@@ -65,12 +65,19 @@ function clean() {
    return del("docs/*");
 }
 
+// function copyFormData() {
+//    return gulp
+//       .src(["./app/sendmail.php", "./app/mail.php"])
+//       .pipe(gulp.dest("./docs"))
+//       .pipe(gulp.src("./app/PHPMailer-6.7.1/**/*"))
+//       .pipe(gulp.dest("./docs/PHPMailer-6.7.1"));
+// }
 function copyFormData() {
    return gulp
-      .src(["./app/sendmail.php", "./app/mail.php"])
+      .src(["./app/mail.php"])
       .pipe(gulp.dest("./docs"))
-      .pipe(gulp.src("./app/PHPMailer-6.7.1/**/*"))
-      .pipe(gulp.dest("./docs/PHPMailer-6.7.1"));
+      .pipe(gulp.src("./app/intl-tel-input-17.0.19/**/*"))
+      .pipe(gulp.dest("./docs/intl-tel-input-17.0.19"));
 }
 
 // Очистить docs за исключением ./img в нём

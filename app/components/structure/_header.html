@@ -1,10 +1,10 @@
-<header class="header">
+<header class="header @@if(context.class){@@class}">
 	<div class="header__container">
 		<div class="header__body">
 			<a class="header__logo" href="index.html">
 				<picture>
-					<source type='image/webp' srcset='@img/logo.webp'>
-					<img src='@img/logo.jpg' alt='Logo'>
+					<source type='image/webp' srcset='@img/logo@@if(context.transparent){-white}.webp'>
+					<img src='@img/logo@@if(context.transparent){-white}.jpg' alt='Logo'>
 				</picture>
 			</a>
 			<nav class="header__action header-action">

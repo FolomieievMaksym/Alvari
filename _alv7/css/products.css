@@ -256,7 +256,25 @@ picture {
   z-index: 11;
   width: 100%;
   opacity: 1;
-  transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s, background-color 0.3s ease 0s;
+}
+
+.header.home {
+  background-color: transparent;
+}
+
+.header.home li {
+  color: #fff;
+}
+
+.header.home li.active a {
+  opacity: 0.75;
+}
+
+.header.home .burger__wrapper span,
+.header.home .burger__wrapper:after,
+.header.home .burger__wrapper:before {
+  background-color: #fff;
 }
 
 .header:hover {
@@ -308,6 +326,8 @@ picture {
 
 .header-action li {
   cursor: pointer;
+  color: rgb(48, 49, 51);
+  transition: color 0.3s ease;
 }
 
 .header-action li:hover a,

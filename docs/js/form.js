@@ -16,8 +16,9 @@ if (document.getElementById("form")) {
                document.querySelector(".pop-up-sucess").classList.remove("active");
             }, 2000);
             form.reset();
+            setCountryCode();
          } else {
-            Alert("Something went wrong");
+            alert("Something went wrong");
          }
       } else {
          alert("Write correct data");
@@ -56,7 +57,8 @@ if (document.getElementById("form")) {
    }
 
    function phoneReg(input) {
-      return /[^\d\-\_\(\)]/.test(input.value);
+      // return /[^\+\d\-\_\(\)]/.test(input.value);
+      return !/\+\d{1,4}[\d\-\_\(\)]/.test(input.value);
    }
    function emailReg(input) {
       // return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
@@ -66,4 +68,18 @@ if (document.getElementById("form")) {
    window.intlTelInput(input, {
       // any initialisation options go here
    });
+   let countryCode = document.querySelector(".iti__selected-flag");
+   countryCode.addEventListener("click", listenCountryCode);
+   function listenCountryCode() {
+      document.querySelector(".iti.iti--container").addEventListener("click", setCountryCode);
+   }
+   setCountryCode();
+   function setCountryCode(e) {
+      // if (e.target.closest(".iti.iti--container li")) {
+      countryCode = document.querySelector(".iti__selected-flag");
+      var el = countryCode.getAttribute("title");
+      var numEl = parseInt(el.match(/\d+/));
+      document.getElementById("phone").value = `+${numEl}`;
+      // }
+   }
 }

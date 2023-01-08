@@ -10,9 +10,17 @@
 <body class="home" id="top">
 	<div class="wrapper">
 		@@include('./components/structure/_header.html', {
-		'active': 'index'
+		'class': 'home',
+		'active': 'index',
+		'transparent': 'true',
 		})
 		<main>
+			@@include('./components/blocks/_hero.html', {
+			'title': 'Alvari',
+			'subtitle': 'Trading and logistics',
+			'text': 'Performant, agile, committed',
+			'photo':'content_00',
+			})
 			<section class="first">
 				<div class='first__bg'>
 					<picture>
@@ -20,16 +28,13 @@
 						<img src='@img/gallery/content_00.jpg' alt='content image #0'>
 					</picture>
 				</div>
+				<button class="first__arrow" id="arrow-bottom">
+					<span>@@include('./components/icons/_arrow-bottom.html')</span>
+				</button>
 				<div class="first__container">
 					<div class="first__content">
-						<div class="first__top">
-							<h1 data-anim data-animate-title class="first__title">Alvari</h1>
-							<h2 data-anim data-animate-subtitle class="first__subtitle hero__subtitle_green">Trading and logistics</h2>
-						</div>
-						<p data-anim data-animate-text class="first__text text">Performant, agile, committed</p>
-						<div data-anim-decor data-animate-decor class="first__decor">
-							<span></span>
-						</div>
+						<h1 data-anim data-animate-title class="first__title">ALVARI GROUP –</h1>
+						<h2 data-anim data-animate-subtitle class="first__subtitle hero__subtitle_green">performant, agile, committed</h2>
 					</div>
 				</div>
 			</section>

@@ -38,7 +38,7 @@ function closeBurger() {
 }
 
 // ! <main></main>
-// document.querySelector("main").style.paddingTop = header.scrollHeight + "px";
+document.querySelector("main").style.paddingTop = header.scrollHeight + "px";
 
 // ! Header
 
@@ -74,5 +74,40 @@ function linkToTop(e) {
       arrowTop.style.opacity = "1";
    } else {
       arrowTop.style.opacity = "0";
+   }
+}
+
+if (document.getElementById("arrow-bottom")) {
+   let viewportHeight = document.documentElement.clientHeight;
+   let logoSource = document.querySelector(".header__logo source");
+   let logoImg = document.querySelector(".header__logo img");
+   if (window.innerWidth > 768) {
+      document.querySelector("main").style.paddingTop = 0;
+      document.getElementById("arrow-bottom").addEventListener("click", scrollDown);
+      function scrollDown() {
+         window.scrollTo(0, viewportHeight - header.scrollHeight);
+      }
+
+      window.addEventListener("scroll", changeHeader);
+      changeHeader();
+      function changeHeader() {
+         console.log(window.scrollY);
+         if (window.scrollY >= viewportHeight - header.scrollHeight) {
+            header.classList.remove("home");
+            setTimeout(() => {
+               logoSource.setAttribute("srcset", "img/logo.webp");
+               logoImg.setAttribute("src", "img/logo.png");
+            }, 180);
+         } else {
+            header.classList.add("home");
+            logoSource.setAttribute("srcset", "img/logo-white.webp");
+            logoImg.setAttribute("src", "img/logo-white.png");
+         }
+      }
+   } else {
+      header.classList.remove("home");
+      logoSource.setAttribute("srcset", "img/logo.webp");
+      logoImg.setAttribute("src", "img/logo.png");
+      // document.querySelector("main").style.paddingTop = header.scrollHeight + "px";
    }
 }

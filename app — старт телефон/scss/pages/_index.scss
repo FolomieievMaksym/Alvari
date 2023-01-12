@@ -112,10 +112,10 @@
    &__container {
       @extend %container;
       padding-top: 36px;
-      padding-bottom: 72px;
+      padding-bottom: 108px;
       display: grid;
       // grid-template-columns: auto;
-      row-gap: 72px;
+      row-gap: 108px;
    }
    &__item {
       @media (min-width: 769px) {

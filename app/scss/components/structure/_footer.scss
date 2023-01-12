@@ -71,10 +71,16 @@
    &__title {
       font-family: $ff2;
       @include fl(17, 20.4);
-      font-weight: 300;
+      font-weight: 700;
       margin-bottom: 36px;
+      text-transform: uppercase;
    }
 
+   &__item {
+      span {
+         font-weight: 700;
+      }
+   }
    &__bottom {
       background-color: #000;
       &-container {

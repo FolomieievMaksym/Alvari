@@ -112,10 +112,10 @@
    &__container {
       @extend %container;
       padding-top: 36px;
-      padding-bottom: 72px;
+      padding-bottom: 108px;
       display: grid;
       // grid-template-columns: auto;
-      row-gap: 72px;
+      row-gap: 108px;
    }
    &__item {
       @media (min-width: 769px) {
@@ -315,6 +315,7 @@
          @include fl(17, 20.4);
          color: $green;
          font-family: $ff2;
+         font-weight: 700;
       }
       p {
          &:not(:last-child, :first-child) {
@@ -401,9 +402,9 @@
    // .pop-up-sucess__wrapper
 
    &__wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
    }
 
    // .pop-up-sucess__text
@@ -419,5 +420,8 @@
       width: max-content;
       box-shadow: 0 0 3px $dark;
       // filter: drop-shadow(0 0 3px $dark);
+      @media (max-width: 370px) {
+         width: min-content;
+      }
    }
 }

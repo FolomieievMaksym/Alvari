@@ -169,8 +169,8 @@ body.lock {
 body {
   color: #777777;
   font-family: "NotoSans";
-  font-size: 0.9375rem;
-  line-height: 1.75;
+  font-size: 0.875rem;
+  line-height: 1.875;
 }
 
 body p::-moz-selection,
@@ -266,10 +266,6 @@ picture {
   color: #fff;
 }
 
-.header.home li.active a {
-  opacity: 0.75;
-}
-
 .header.home .burger__wrapper span,
 .header.home .burger__wrapper:after,
 .header.home .burger__wrapper:before {
@@ -290,6 +286,10 @@ picture {
   z-index: 1;
 }
 
+.header._after::after {
+  opacity: 1;
+}
+
 .header:after {
   content: "";
   position: absolute;
@@ -298,7 +298,9 @@ picture {
   left: 0;
   width: 100%;
   height: 2px;
+  transition: opacity 1s ease;
   background: #47ac77;
+  opacity: 0;
 }
 
 .header__container {
@@ -331,7 +333,8 @@ picture {
 
 .header-action li:hover a,
 .header-action li.active a {
-  opacity: 0.5;
+  color: #47ac77;
+  opacity: 1 !important;
 }
 
 .header-action li a {
@@ -571,8 +574,13 @@ picture {
   font-family: "Montserrat";
   font-size: 1.0625rem;
   line-height: 1.2;
-  font-weight: 300;
+  font-weight: 700;
   margin-bottom: 36px;
+  text-transform: uppercase;
+}
+
+.footer__item span {
+  font-weight: 700;
 }
 
 .footer__bottom {

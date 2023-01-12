@@ -51,6 +51,11 @@ headerToHide.forEach((el) => {
 window.addEventListener("scroll", hideHeaderPart);
 hideHeaderPart();
 function hideHeaderPart() {
+   if (window.scrollY == 0) {
+      header.classList.remove("_after");
+   } else {
+      header.classList.add("_after");
+   }
    if (window.pageYOffset > header.scrollHeight / 2) {
       headerToHide.forEach((el) => {
          el.style.height = "0px";
@@ -91,7 +96,11 @@ if (document.getElementById("arrow-bottom")) {
       window.addEventListener("scroll", changeHeader);
       changeHeader();
       function changeHeader() {
-         console.log(window.scrollY);
+         // if (window.scrollY == 0) {
+         //    header.classList.remove("_after");
+         // } else {
+         //    header.classList.add("_after");
+         // }
          if (window.scrollY >= viewportHeight - header.scrollHeight) {
             header.classList.remove("home");
             setTimeout(() => {

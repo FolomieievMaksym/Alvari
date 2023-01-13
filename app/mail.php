@@ -1,14 +1,11 @@
 <?php
-// define('TG_TOKEN', '5766091008:AAEA9Uq5RRpKyk2584Dxhy2b57fjZtKqLPo');
 
-// $link = "success.php";
 $link = "contacts.html";
 $method = $_SERVER['REQUEST_METHOD'];
-//Script Foreach
 $c = true;
 $message = "";
 	$project_name = "Alvari";
-	$admin_email  = "folomieiev.m@gmail.com";
+	$admin_email  = "exampleÍ.m@gmail.com";
 	$form_subject = "Form subject";
 
 	$_POST['project_name'] = $project_name;

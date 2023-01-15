@@ -5,8 +5,8 @@ $method = $_SERVER['REQUEST_METHOD'];
 $c = true;
 $message = "";
 	$project_name = "Alvari";
-	$admin_email  = "exampleÍ.m@gmail.com";
-	$form_subject = "Form subject";
+	$admin_email  = "info@alvarigroup.com";
+	$form_subject = "New Alvari Web Request";
 
 	$_POST['project_name'] = $project_name;
 	$_POST['admin_email'] = $admin_email;

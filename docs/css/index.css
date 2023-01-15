@@ -947,7 +947,7 @@ picture {
 
 .first__container {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   top: 0;
   bottom: 0;
   left: 0;
@@ -957,7 +957,6 @@ picture {
   align-items: center;
   padding-left: 10%;
   padding-right: 5%;
-  pointer-events: none;
 }
 
 .first__content {
@@ -1042,6 +1041,7 @@ picture {
 }
 
 .first__bg {
+  pointer-events: none;
   position: absolute;
   z-index: 0;
   top: 0;
@@ -1173,6 +1173,31 @@ picture {
   transition-property: transform, opacity;
   transition-duration: 0.8s 0.3s;
   transition-delay: 0s 0s;
+  transition-timing-function: ease ease;
+}
+
+[data-animate-title-modified] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0s, 1.6s;
+  transition-delay: 0s 0s;
+  transition-timing-function: ease ease;
+}
+
+[data-animate-subtitle-modified] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0s, 1.6s;
+  transition-delay: 0s 0s;
+  transition-timing-function: ease ease;
+}
+
+[data-anim-text] {
+  opacity: 0;
+  transform: translate(0, 0);
+  transition-property: transform, opacity;
+  transition-duration: 1.2s 1.2s;
+  transition-delay: 1s 1s;
   transition-timing-function: ease ease;
 }
 

@@ -7,6 +7,8 @@ const itemsToAnimateBottom = document.querySelectorAll("[data-animate-bottom]");
 const itemsToAnimateTop = document.querySelectorAll("[data-animate-top]");
 const itemsToAnimateScale = document.querySelectorAll("[data-animate-scale]");
 const itemsToAnimateAnim = document.querySelectorAll("[data-anim]");
+const itemsToAnimateAnimModified = document.querySelectorAll("[data-animate-modified]");
+const itemsToAnimateAnimText = document.querySelectorAll("[data-anim-text]");
 const itemsToAnimateDecor = document.querySelectorAll("[data-anim-decor]");
 const itemsToAnimateAddress = document.querySelectorAll("[data-animate-address]");
 
@@ -56,6 +58,21 @@ itemsToAnimateAnim.forEach((el) => {
    el.style.transitionProperty = "transform, opacity";
    el.style.transitionDuration = "0.8s, 0.3s";
    el.style.transitionDelay = "0s, 0s";
+   el.style.transitionTimingFunction = "ease, ease";
+});
+itemsToAnimateAnimModified.forEach((el) => {
+   el.style.opacity = "0";
+   el.style.transitionProperty = "transform, opacity";
+   el.style.transitionDuration = "1.6s, 0.6s";
+   el.style.transitionDuration = "1.6s, 1.6s";
+   el.style.transitionDelay = "0s, 0s";
+   el.style.transitionTimingFunction = "ease, ease";
+});
+itemsToAnimateAnimText.forEach((el) => {
+   el.style.opacity = "0";
+   el.style.transitionProperty = "transform, opacity";
+   el.style.transitionDuration = "1.6s, 0.6s";
+   el.style.transitionDelay = "1.2s, 1.2s";
    el.style.transitionTimingFunction = "ease, ease";
 });
 itemsToAnimateDecor.forEach((el) => {
@@ -116,6 +133,18 @@ function showAnimatedItems(e) {
       }
    });
    itemsToAnimateAnim.forEach((el) => {
+      if (el.getBoundingClientRect().top <= viewportHeight / 1.15) {
+         el.style.transform = "scale(1)";
+         el.style.opacity = "1";
+      }
+   });
+   itemsToAnimateAnimModified.forEach((el) => {
+      if (el.getBoundingClientRect().top <= viewportHeight / 1.15) {
+         el.style.transform = "scale(1)";
+         el.style.opacity = "1";
+      }
+   });
+   itemsToAnimateAnimText.forEach((el) => {
       if (el.getBoundingClientRect().top <= viewportHeight / 1.15) {
          el.style.transform = "scale(1)";
          el.style.opacity = "1";
